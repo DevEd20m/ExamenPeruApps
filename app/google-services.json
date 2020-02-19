@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "729117398783",
+    "firebase_url": "https://peruapps-bd0b2.firebaseio.com",
+    "project_id": "peruapps-bd0b2",
+    "storage_bucket": "peruapps-bd0b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729117398783:android:fd3edf75ff1f70266f9eca",
+        "android_client_info": {
+          "package_name": "com.deved.examenperuapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729117398783-14vsv0v396po3ec5acfkvcuopqi0ebbr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.deved.examenperuapps",
+            "certificate_hash": "032776971fa436aebf434b36a40656d4fc6454f3"
+          }
+        },
+        {
+          "client_id": "729117398783-t5ct9ickmtqt777p3vspvb37dppcg0nm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTdDAvDAMYsW7IJnQGITQGxMjlm6tm7xs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729117398783-t5ct9ickmtqt777p3vspvb37dppcg0nm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
