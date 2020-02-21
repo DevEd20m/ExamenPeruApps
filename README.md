@@ -25,6 +25,8 @@ Elementos:
 
 
 **Capa de Dominio**
+
+En la capa de dominio, se encuentra la lógica de la aplicación, este comprende el lenguaje puro, sin dependencias a librerías externas
 - Entidades de la capa Dominio
 - Interactors o UsesCases
 
