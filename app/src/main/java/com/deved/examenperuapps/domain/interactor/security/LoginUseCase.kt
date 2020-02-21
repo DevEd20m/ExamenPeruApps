@@ -2,6 +2,7 @@ package com.deved.examenperuapps.domain.interactor.security
 
 import com.deved.examenperuapps.domain.model.User
 import com.deved.examenperuapps.domain.repository.LoginRepository
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginUseCase(private val loginRepository: LoginRepository) {
 
@@ -9,7 +10,10 @@ class LoginUseCase(private val loginRepository: LoginRepository) {
         loginRepository.signInWithEmailAndPassword(user)
     }
 
-    suspend fun logOut(){
-        loginRepository.logOut()
+    fun isSign(mAuth:FirebaseAuth):Boolean{
+        mAuth?.let {
+            return it.currentUser!=null
+        }
+
     }
 }

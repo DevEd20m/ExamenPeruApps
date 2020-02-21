@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_places"
+        android:title="@string/text_home"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/action_experiences"
+        android:title="@string/text_share"
+        />
+
+    <item
+        android:id="@+id/action_perfil"
+        android:title="@string/text_more"
+        app:showAsAction="ifRoom" />
+</menu>

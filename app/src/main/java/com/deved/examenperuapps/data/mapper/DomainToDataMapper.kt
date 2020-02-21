@@ -18,3 +18,5 @@ class DomainToDataMapper:Mapper<UserNet,User> {
     }
 
 }
+
+
