@@ -39,3 +39,4 @@ En la capa de dominio, se encuentra la lógica de la aplicación, este comprende
 5. Firebase Database
 6. Firebase Auth
 7. Firebase FireStore
+8. Room
