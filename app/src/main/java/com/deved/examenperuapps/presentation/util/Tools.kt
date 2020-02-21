@@ -8,7 +8,13 @@ class Tools{
         Toast.makeText(context,message,duration).show()
     }
 
+
     companion object{
+        fun validateNull(input:Any?):Boolean{
+            return input!=null
+        }
+
+
         const val emptyInput:String = "El campo ingresado se encuentra vacio"
     }
 }

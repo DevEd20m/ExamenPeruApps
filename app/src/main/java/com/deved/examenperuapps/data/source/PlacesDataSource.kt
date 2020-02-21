@@ -1,26 +1,42 @@
 package com.deved.examenperuapps.data.source
 
 import android.util.Log
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.firestore.*
+import androidx.lifecycle.MutableLiveData
+import com.deved.examenperuapps.data.network.model.PlaceNet
+
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.QueryDocumentSnapshot
 
 
-class PlacesDataSource(private var mPlacesDocument:CollectionReference) {
+class PlacesDataSource(private var mPlacesDocument: CollectionReference) {
 
-    fun getAllPlacesOfPeru() {
-
-        mPlacesDocument.get().addOnCompleteListener{task->
-            if(task.isSuccessful){
+    fun getAllPlacesOfPeru(): MutableLiveData<List<PlaceNet>> {
+        val mutable = MutableLiveData<List<PlaceNet>>()
+        mPlacesDocument.get().addOnCompleteListener { task ->
+            if (task.isSuccessful) {
                 task?.result?.let {
-                    for(document:QueryDocumentSnapshot in it){
-                        Log.d("TAG_D","${document.id} -> ${document.data}")
+                    var lista = arrayListOf<PlaceNet>()
+                    for (document: QueryDocumentSnapshot in it) {
+                        lista.add(document.toObject(PlaceNet::class.java))
                     }
+
+                    mutable.value = lista
                 }
 
-            }else{
-                Log.w("TAG_D","Error getting document -> ${task.exception}")
+            } else {
+                mutable.value = null
             }
         }
+        return mutable
+    }
 
+    fun saveMyExperience(placeNet: PlaceNet){
+        mPlacesDocument.add(placeNet)
+            .addOnSuccessListener {
+                Log.d("TAG_D", "DocumentSnapshot added with ID: ${it.id}")
+            }.addOnFailureListener {
+                Log.w("TAG_D", "Error adding document", it)
+            }
     }
 }
+

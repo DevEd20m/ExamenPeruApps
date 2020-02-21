@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingHorizontal="15dp"
+        android:textColor="@color/colorPrimaryDark"
         android:paddingVertical="15dp"
         android:text="@string/nameItem" />
 </LinearLayout>
