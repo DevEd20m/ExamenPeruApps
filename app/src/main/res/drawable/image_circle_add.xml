@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape android:shape="oval" >
+            <size android:width="2dp" android:height="2dp"/>
+            <gradient
+                android:angle="270"
+                android:endColor="@color/colorAccent"
+                android:startColor="@color/colorPrimaryDark" />
+        </shape>
+    </item>
+    <item>
+        <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+            android:src="@drawable/ic_add" android:gravity="center" />
+    </item>
+</layer-list>

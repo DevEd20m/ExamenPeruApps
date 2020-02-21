@@ -4,14 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".presentation.ui.fragment.ShareExperienceFragment">
 
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_contentFotos"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
+    <ImageView
+        android:id="@+id/iv_addFoto"
+        android:layout_width="30dp"
+        android:layout_margin="10dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_add"
+        android:background="#000"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/shape_login"
         android:orientation="vertical"
